@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Rwfly06 — Full Stack Developer & Arch Linux Enthusiast. Portofolio futuristik bertema cyberpunk neon."/>
+  <meta name="keywords" content="Rwfly06, portfolio, arch linux, developer, cyberpunk, full stack"/>
+  <meta name="author" content="Rwfly06"/>
+  <meta property="og:title" content="Rwfly06 — Arch Linux Developer"/>
+  <meta property="og:description" content="Powered by Arch Linux, Built with Passion."/>
+  <meta name="theme-color" content="#050505"/>
+  <title>Rwfly06 ⚡ Arch Linux Neon Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%2300E5FF' d='M32 4C29.5 10.5 28 15 25.5 20.5 27 22.5 29 24.3 31.5 25.4 28.8 24.6 26.7 23.4 24.7 21.8 23.4 24.6 22 27.3 20 30.6 14.8 40 9.6 48.4 3 58 11.8 52.6 19.6 49.6 27.9 48.9L32 40.9 36.1 48.9C44.4 49.6 52.2 52.6 61 58 54.4 48.4 49.2 40 44 30.6 39.7 23 36 15.4 32 4Z'/></svg>"/>
+</head>
+<body>
+
+  <!-- ═══ BOOT SCREEN ═══ -->
+  <div id="boot" aria-hidden="true">
+    <div class="boot-window">
+      <div class="boot-bar"><span class="b-dot r"></span><span class="b-dot y"></span><span class="b-dot g"></span><span class="boot-title">tty1 — systemd-boot</span></div>
+      <pre id="bootText"></pre>
+    </div>
+    <p class="boot-skip">klik untuk skip &gt;&gt;</p>
+  </div>
+
+  <!-- ═══ FX LAYERS ═══ -->
+  <canvas id="matrix"></canvas>
+  <canvas id="particles"></canvas>
+  <div class="aurora"><span></span><span></span><span></span></div>
+  <div class="cyber-grid" aria-hidden="true"></div>
+  <div id="cursorGlow"></div>
+  <div id="cursor"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav id="navbar">
+    <a class="nav-logo" href="#home">
+      <svg viewBox="0 0 64 64" class="arch-ico"><path d="M32 4C29.5 10.5 28 15 25.5 20.5 27 22.5 29 24.3 31.5 25.4 28.8 24.6 26.7 23.4 24.7 21.8 23.4 24.6 22 27.3 20 30.6 14.8 40 9.6 48.4 3 58 11.8 52.6 19.6 49.6 27.9 48.9L32 40.9 36.1 48.9C44.4 49.6 52.2 52.6 61 58 54.4 48.4 49.2 40 44 30.6 39.7 23 36 15.4 32 4Z"/></svg>
+      <span>Rwfly<b>06</b></span>
+    </a>
+    <button id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#linux">Linux</a></li>
+      <li><a href="#terminal">Terminal</a></li>
+      <li><a href="#timeline">Journey</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <header id="home" class="hero">
+    <svg viewBox="0 0 64 64" class="arch-hero" aria-hidden="true">
+      <defs>
+        <linearGradient id="archGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#00E5FF"/><stop offset="50%" stop-color="#0099FF"/><stop offset="100%" stop-color="#8A2BE2"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#archGrad)" d="M32 4C29.5 10.5 28 15 25.5 20.5 27 22.5 29 24.3 31.5 25.4 28.8 24.6 26.7 23.4 24.7 21.8 23.4 24.6 22 27.3 20 30.6 14.8 40 9.6 48.4 3 58 11.8 52.6 19.6 49.6 27.9 48.9L32 40.9 36.1 48.9C44.4 49.6 52.2 52.6 61 58 54.4 48.4 49.2 40 44 30.6 39.7 23 36 15.4 32 4Z"/>
+    </svg>
+
+    <div class="avatar-ring rgb tilt" data-tilt>
+      <img src="https://github.com/Rwfly06.png" alt="Avatar Rwfly06" loading="lazy"/>
+    </div>
+
+    <h1 class="glitch" data-text="Rwfly06">Rwfly06</h1>
+    <p class="typing-line">&gt; <span id="typeRole"></span><span class="type-caret">█</span></p>
+
+    <div class="hero-btns">
+      <a class="btn btn-cyan"   href="#projects">⚡ View Projects</a>
+      <a class="btn btn-purple" href="#contact">✉ Contact Me</a>
+      <a class="btn btn-pink"   href="assets/cv.pdf" download>⬇ Download CV</a>
+    </div>
+
+    <!-- floating icons -->
+    <i class="devicon-linux-plain float-ico f1"></i>
+    <i class="devicon-archlinux-plain float-ico f2"></i>
+    <i class="devicon-javascript-plain float-ico f3"></i>
+    <i class="devicon-react-original float-ico f4"></i>
+    <i class="devicon-python-plain float-ico f5"></i>
+    <span class="scroll-hint">▼ scroll</span>
+  </header>
+
+  <main>
+  <!-- ═══ DASHBOARD ═══ -->
+  <section id="dashboard" class="section reveal">
+    <h2 class="sec-title">// GitHub <span>Dashboard</span></h2>
+    <p class="sec-sub">Statistik real-time langsung dari GitHub API</p>
+
+    <div class="counters">
+      <div class="counter glass tilt" data-tilt><b id="cFollowers">—</b><span>Followers</span></div>
+      <div class="counter glass tilt" data-tilt><b id="cFollowing">—</b><span>Following</span></div>
+      <div class="counter glass tilt" data-tilt><b id="cRepos">—</b><span>Repositories</span></div>
+      <div class="counter glass tilt" data-tilt><b id="cStars">—</b><span>Total Stars</span></div>
+      <div class="counter glass tilt" data-tilt><b id="cPRs">—</b><span>Pull Requests</span></div>
+      <div class="counter glass tilt" data-tilt><b id="cIssues">—</b><span>Issues</span></div>
+    </div>
+
+    <div class="stats-grid">
+      <img class="glass-img" src="https://github-readme-stats.vercel.app/api?username=Rwfly06&show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=00E5FF&icon_color=FF00FF&text_color=c9d8ff&ring_color=8A2BE2" alt="GitHub Stats (termasuk total commits)" loading="lazy"/>
+      <img class="glass-img" src="https://streak-stats.demolab.com/?user=Rwfly06&hide_border=true&background=00000000&ring=00E5FF&fire=FF00FF&currStreakLabel=00E5FF&sideLabels=8A2BE2&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=6b7a99" alt="Streak Stats" loading="lazy"/>
+      <img class="glass-img" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rwfly06&layout=compact&hide_border=true&bg_color=00000000&title_color=00E5FF&text_color=c9d8ff" alt="Top Languages" loading="lazy"/>
+    </div>
+
+    <img class="glass-img wide" src="https://github-readme-activity-graph.vercel.app/graph?username=Rwfly06&bg_color=050505&color=00e5ff&line=8a2be2&point=ff00ff&area=true&hide_border=true" alt="Contribution Graph" loading="lazy"/>
+    <img class="glass-img wide" src="https://github-profile-trophy.vercel.app/?username=Rwfly06&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" alt="GitHub Trophies" loading="lazy"/>
+    <!-- Snake: aktifkan GitHub Action Platane/snk di repo profil agar memakai kontribusimu sendiri -->
+    <img class="glass-img wide" src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake" loading="lazy"/>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section reveal">
+    <h2 class="sec-title">// Project <span>Showcase</span></h2>
+    <p class="sec-sub">Diambil otomatis dari repositori GitHub terpopuler</p>
+    <div id="projectGrid" class="proj-grid">
+      <p class="loading-hint">$ fetching repositories<span class="type-caret">█</span></p>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="section reveal">
+    <h2 class="sec-title">// Skill <span>Matrix</span></h2>
+    <p class="sec-sub">Progress bar neon — level ditentukan jam terbang</p>
+    <div id="skillGrid" class="skill-grid"></div>
+  </section>
+
+  <!-- ═══ LINUX ═══ -->
+  <section id="linux" class="section reveal">
+    <h2 class="sec-title">// My Linux <span>Environment</span></h2>
+    <p class="sec-sub">btw, I use Arch 🐧</p>
+
+    <div class="linux-wrap">
+      <div class="linux-panel glass">
+        <svg viewBox="0 0 64 64" class="arch-panel"><path fill="url(#archGrad)" d="M32 4C29.5 10.5 28 15 25.5 20.5 27 22.5 29 24.3 31.5 25.4 28.8 24.6 26.7 23.4 24.7 21.8 23.4 24.6 22 27.3 20 30.6 14.8 40 9.6 48.4 3 58 11.8 52.6 19.6 49.6 27.9 48.9L32 40.9 36.1 48.9C44.4 49.6 52.2 52.6 61 58 54.4 48.4 49.2 40 44 30.6 39.7 23 36 15.4 32 4Z"/></svg>
+        <h3>Arch Linux</h3>
+        <ul class="env-list">
+          <li><b>WM</b> Hyprland</li>
+          <li><b>Bar</b> Waybar</li>
+          <li><b>Term</b> Kitty</li>
+          <li><b>Editor</b> Neovim</li>
+          <li><b>Shell</b> Fish + Zsh</li>
+          <li><b>Fetch</b> Fastfetch</li>
+          <li><b>Monitor</b> Btop</li>
+          <li><b>Mux</b> Tmux</li>
+        </ul>
+      </div>
+
+      <!-- Desktop mockup -->
+      <div class="desktop tilt" data-tilt>
+        <div class="waybar">
+          <span class="ws"><i class="on">1</i><i>2</i><i>3</i><i>4</i><i>5</i></span>
+          <span class="wb-title"> Hyprland</span>
+          <span class="wb-right">󰖩 󰂯 󰕾  <b id="fakeClock">18:37</b></span>
+        </div>
+        <div class="desk-body">
+          <div class="win fastfetch">
+            <div class="win-bar"><span class="b-dot r"></span><span class="b-dot y"></span><span class="b-dot g"></span> kitty: fastfetch</div>
+<pre>       <span class="c">/\</span>        <b>rwfly06</b>@archbtw
+      <span class="c">/  \</span>       ─────────────────
+     <span class="c">/\   \</span>      <span class="p">OS</span>: Arch Linux x86_64
+    <span class="c">/  __  \</span>     <span class="p">Kernel</span>: 6.9-zen
+   <span class="c">/  (  )  \</span>    <span class="p">WM</span>: Hyprland
+  <span class="c">/ __|  |__ \</span>   <span class="p">Shell</span>: fish 4.0
+ <span class="c">/.`      `.\</span>  <span class="p">Term</span>: kitty
+               <span class="p">Uptime</span>: always coding</pre>
+          </div>
+          <div class="win btop">
+            <div class="win-bar"><span class="b-dot r"></span><span class="b-dot y"></span><span class="b-dot g"></span> kitty: btop</div>
+            <div class="btop-body">
+              <div class="meter"><span>CPU</span><div class="m-track"><div class="m-fill mf1"></div></div></div>
+              <div class="meter"><span>MEM</span><div class="m-track"><div class="m-fill mf2"></div></div></div>
+              <div class="meter"><span>NET</span><div class="m-track"><div class="m-fill mf3"></div></div></div>
+              <div class="meter"><span>GPU</span><div class="m-track"><div class="m-fill mf4"></div></div></div>
+            </div>
+          </div>
+          <div class="scanline"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TERMINAL ═══ -->
+  <section id="terminal" class="section reveal">
+    <h2 class="sec-title">// Interactive <span>Terminal</span></h2>
+    <p class="sec-sub">Coba ketik: <code>help</code>, <code>whoami</code>, <code>neofetch</code>, <code>skills</code>, <code>projects</code>, <code>contact</code></p>
+    <div class="term glass">
+      <div class="win-bar"><span class="b-dot r"></span><span class="b-dot y"></span><span class="b-dot g"></span> rwfly06@archbtw:~</div>
+      <div id="termOut"></div>
+      <div class="term-line">
+        <span class="prompt">rwfly06@arch<b>:~$</b></span>
+        <input id="termIn" type="text" autocomplete="off" spellcheck="false" aria-label="terminal input"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TIMELINE ═══ -->
+  <section id="timeline" class="section reveal">
+    <h2 class="sec-title">// Experience <span>Timeline</span></h2>
+    <div class="tl">
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card glass"><h4>🌱 Belajar Programming</h4><p>Mulai dari HTML, CSS, dan JavaScript — membangun fondasi logika & web dasar.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card glass"><h4>🐧 Belajar Linux</h4><p>Pindah full-time ke Linux, berakhir di Arch + Hyprland. Terminal jadi rumah kedua.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card glass"><h4>🔓 Open Source</h4><p>Mulai kontribusi ke proyek open source — PR pertama, issue pertama, komunitas pertama.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card glass"><h4>💼 Freelance</h4><p>Mengerjakan proyek klien: landing page, dashboard, dan automasi.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card glass"><h4>🚀 Project Besar</h4><p>Membangun aplikasi full-stack skala besar dengan CI/CD dan arsitektur modern.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card glass"><h4>🎯 Target Masa Depan</h4><p>Menjadi engineer kelas dunia & maintainer open source — sambil tetap ricing Arch.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ═══ TECH BADGES ═══ -->
+  <section id="tech" class="section reveal">
+    <h2 class="sec-title">// Tech <span>Stack</span></h2>
+    <div id="badgeCloud" class="badges"></div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section reveal">
+    <h2 class="sec-title">// Open a <span>Connection</span></h2>
+    <p class="sec-sub">ping me — response time &lt; 24h</p>
+    <div class="contact-grid">
+      <a class="contact-card glass tilt" data-tilt href="https://github.com/Rwfly06" target="_blank" rel="noopener"><i class="devicon-github-original"></i><b>GitHub</b><span>@Rwfly06</span></a>
+      <a class="contact-card glass tilt" data-tilt href="#" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i><b>LinkedIn</b><span>tambahkan link</span></a>
+      <a class="contact-card glass tilt" data-tilt href="#" target="_blank" rel="noopener"><span class="emo">📸</span><b>Instagram</b><span>tambahkan link</span></a>
+      <a class="contact-card glass tilt" data-tilt href="mailto:youremail@example.com"><span class="emo">📧</span><b>Email</b><span>youremail@example.com</span></a>
+      <a class="contact-card glass tilt" data-tilt href="#"><span class="emo">🎮</span><b>Discord</b><span>rwfly06</span></a>
+      <a class="contact-card glass tilt" data-tilt href="#"><span class="emo">✈️</span><b>Telegram</b><span>@rwfly06</span></a>
+    </div>
+  </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <svg viewBox="0 0 64 64" class="arch-ico"><path fill="#00E5FF" d="M32 4C29.5 10.5 28 15 25.5 20.5 27 22.5 29 24.3 31.5 25.4 28.8 24.6 26.7 23.4 24.7 21.8 23.4 24.6 22 27.3 20 30.6 14.8 40 9.6 48.4 3 58 11.8 52.6 19.6 49.6 27.9 48.9L32 40.9 36.1 48.9C44.4 49.6 52.2 52.6 61 58 54.4 48.4 49.2 40 44 30.6 39.7 23 36 15.4 32 4Z"/></svg>
+    <p class="quote">"Powered by <b>Arch Linux</b>, Built with <span>Passion</span>."</p>
+    <p class="copy">© 2026 Rwfly06 — All systems operational <span class="status-dot"></span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
